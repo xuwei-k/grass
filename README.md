@@ -1,4 +1,4 @@
-# sbt grass plugin
+# sbt grass plugin [![Build Status](https://secure.travis-ci.org/xuwei-k/grass.png)](http://travis-ci.org/xuwei-k/grass)
 
 http://www.blue.sky.or.jp/grass
 
