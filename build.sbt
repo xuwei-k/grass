@@ -12,6 +12,10 @@ ScriptedPlugin.scriptedSettings
 
 ScriptedPlugin.scriptedBufferLog := false
 
+scriptedLaunchOpts ++= sys.process.javaVmArguments.filter(
+  a => Seq("-Xmx","-Xms","-XX").exists(a.startsWith)
+)
+
 watchSources <++= (ScriptedPlugin.sbtTestDirectory).map{ dir => (dir ***).get }
 
 publishTo := sys.env.get("MAVEN_DIRECTORY").map{ dir =>
